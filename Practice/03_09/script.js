@@ -16,11 +16,43 @@ const backpack = {
     left: 26,
     right: 26,
   },
+  changeName: function (value) {
+    this.name = value;
+  },
+  changeVolume: function (value) {
+    this.volume = value;
+  },
+  changeColor: function (value) {
+    this.color = value;
+  },
+  changePocketNumber: function (value) {
+    this.pocketNum = value;
+  },
   toggleLid: function (lidStatus) {
     this.lidOpen = lidStatus;
   },
-  newStrapLength: function (lengthLeft, lengthRight) {
+  changeStrapLength: function (lengthLeft, lengthRight) {
     this.strapLength.left = lengthLeft;
     this.strapLength.right = lengthRight;
   },
 };
+
+console.log("Name:", backpack.name);
+console.log("Volume:", backpack.volume);
+console.log("Color:", backpack.color);
+console.log("Pocket Number:", backpack.pocketNum);
+console.log("Strap Length Left:", backpack.strapLength.left);
+console.log("Strap Length Right:", backpack.strapLength.right);
+
+backpack.changeName("School Backpack");
+backpack.changeVolume(20);
+backpack.changeColor("Green");
+backpack.changePocketNumber(20);
+backpack.changeStrapLength(20, 20);
+
+console.log("Name:", backpack.name);
+console.log("Volume:", backpack.volume);
+console.log("Color:", backpack.color);
+console.log("Pocket Number:", backpack.pocketNum);
+console.log("Strap Length Left:", backpack.strapLength.left);
+console.log("Strap Length Right:", backpack.strapLength.right);
