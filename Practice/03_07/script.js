@@ -18,8 +18,8 @@ const mobile = {
     cargeTime: "2 hours",
   },
   active: false,
-  enable: function () {
-    this.active = true;
+  enable: function (status) {
+    this.active = status;
   },
 };
 
