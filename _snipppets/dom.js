@@ -10,6 +10,18 @@
 ########################################### */
 // element.outerHTML;
 
+/* ############### getElementsByClassName ###############
+  Returns an array-like object of all child elements
+  which have all of the given class name(s). 
+########################################### */
+// document.getElementsByClassName("className")
+
+/* ############### getElementById ###############
+  Returns an Element object representing the element
+  whose id property matches the specified string.
+########################################### */
+// document.getElementById("elementId");
+
 /*################# Query Selector #################
   Select the target element, could be id, class or tag
 #################################################### */
