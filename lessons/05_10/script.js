@@ -1,10 +1,10 @@
 /**
  * Challenge: Add a new element
  * - In JavaScript, create a new element to hold a navigation menu
- * - Add an unordered list and a series of no less than five links to the list 
+ * - Add an unordered list and a series of no less than five links to the list
  * - Use single words like “home”, “about”, etc for the list items and set the src attribute to # for simplicity
  * - Add the new navigation element to the DOM directly after the header
- * - Write basic CSS and add classes as necessary to create a horizontal layout for the menu. 
+ * - Write basic CSS and add classes as necessary to create a horizontal layout for the menu.
  * - A tip: Use either display flex or display grid to create the horizontal menu.
  */
 
@@ -29,25 +29,13 @@ const content = `
     </figure>
     <h1 class="backpack__name">Everyday Backpack</h1>
     <ul class="backpack__features">
-      <li class="packprop backpack__volume">Volume:<span> ${
-        everydayPack.volume
-      }l</span></li>
-      <li class="packprop backpack__color">Color:<span> ${
-        everydayPack.color
-      }</span></li>
+      <li class="packprop backpack__volume">Volume:<span> ${everydayPack.volume}l</span></li>
+      <li class="packprop backpack__color">Color:<span> ${everydayPack.color}</span></li>
       <li class="backpack__age">Age:<span> ${everydayPack.backpackAge()} days old</span></li>
-      <li class="packprop backpack__pockets">Number of pockets:<span> ${
-        everydayPack.pocketNum
-      }</span></li>
-      <li class="packprop backpack__strap">Left strap length:<span> ${
-        everydayPack.strapLength.left
-      } inches</span></li>
-      <li class="packprop backpack__strap">Right strap length:<span> ${
-        everydayPack.strapLength.right
-      } inches</span></li>
-      <li class="packprop backpack__lid">Lid status:<span> ${
-        everydayPack.lidOpen
-      }</span></li>
+      <li class="packprop backpack__pockets">Number of pockets:<span> ${everydayPack.pocketNum}</span></li>
+      <li class="packprop backpack__strap">Left strap length:<span> ${everydayPack.strapLength.left} inches</span></li>
+      <li class="packprop backpack__strap">Right strap length:<span> ${everydayPack.strapLength.right} inches</span></li>
+      <li class="packprop backpack__lid">Lid status:<span> ${everydayPack.lidOpen}</span></li>
     </ul>
   
 `;
@@ -60,3 +48,37 @@ newArticle.setAttribute("id", "everyday");
 newArticle.innerHTML = content;
 
 main.append(newArticle);
+
+/*
+<header></header>
+<nav>
+  <ul class="main-menu">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About Us</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Q&A</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+*/
+
+const header = document.querySelector(".siteheader");
+const nav = document.createElement("nav");
+const ul = document.createElement("ul");
+ul.classList.add("main-menu");
+nav.append(ul);
+
+/**
+ * Add a navigation section to the DOM.
+ */
+const list = `
+<li><a href="#">Home</a></li>
+<li><a href="#">About Us</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">Q&A</a></li>
+<li><a href="#">Contact</a></li>
+`;
+
+ul.innerHTML = list;
+
+header.append(nav);
