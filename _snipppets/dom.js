@@ -63,3 +63,29 @@ element.classList.toggle("--active");
   Replace the provided class with a another one.
 ################################################# */
 element.classList.replace("packprop", "another-class");
+
+/* ############## element.artributes ##############
+  Returns all attributes within an element.
+########################################### */
+element.attributes;
+
+/* ############## element.hasAttribute ##############
+  Returns true or false if attribute exists
+  withing provided element.
+########################################### */
+element.hasAttribute("class");
+
+/* ############## element.getAttribute ##############
+  Returns the value of given attribute.
+########################################### */
+element.getAttribute("src");
+
+/* ############## element.setAttribute ##############
+  Create a new attribute to the given element.
+########################################### */
+element.setAttribute("alt", "my-image");
+
+/* ############## element.removeAttribute ##############
+  Remove attribute of given element.
+########################################### */
+element.removeAttribute("title");
