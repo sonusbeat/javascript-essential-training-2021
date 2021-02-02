@@ -87,5 +87,20 @@ element.setAttribute("alt", "my-image");
 
 /* ############## element.removeAttribute ##############
   Remove attribute of given element.
-########################################### */
+######################################################## */
 element.removeAttribute("title");
+
+/* ############## element.style ##############
+  Returns all styles applied to element.
+############################################## */
+element.style;
+
+/* ############## element.style.propertyName ##############
+  Set name and value inline style of given element.
+########################################################## */
+element.style.color = "crimson";
+
+/* ############## element.style.cssText ##############
+  Set css inline styles.
+########################################################## */
+element.style.cssText = "color:crimson;background-color:black;";
