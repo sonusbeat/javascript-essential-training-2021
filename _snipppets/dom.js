@@ -1,35 +1,65 @@
+const element = document.querySelector("p");
+
 /* ############### innerHTML ###############
   Gets or sets the HTML or XML markup contained within the element.
 ########################################### */
-// element.innerHTML;
+element.innerHTML;
 
 /* ############### outerHTML ###############
   The outerHTML attribute of the Element DOM interface
   gets the serialized HTML fragment describing the element
   including its descendants.
 ########################################### */
-// element.outerHTML;
+element.outerHTML;
 
 /* ############### getElementsByClassName ###############
   Returns an array-like object of all child elements
   which have all of the given class name(s). 
 ########################################### */
-// document.getElementsByClassName("className")
+document.getElementsByClassName("className");
 
 /* ############### getElementById ###############
   Returns an Element object representing the element
   whose id property matches the specified string.
 ########################################### */
-// document.getElementById("elementId");
+document.getElementById("elementId");
 
 /*################# Query Selector #################
   Select the target element, could be id, class or tag
 #################################################### */
-// querySelector("element");
+document.querySelector("element");
 
 /* ############ Query Selector All ############
   Select all the target elements,
   and save them into array,
   could be id, class or tag
 ############################################## */
-// querySelectorAll("element");
+document.querySelectorAll("element");
+
+/* ############ className ############
+  Returns the value of the element's
+  class content attribute.
+  Can be set to change it.
+############################################## */
+document.querySelector("element").className = "new-class";
+
+/* ############ classList.add ############
+  Adds a new class to the existing array of classes.
+############################################## */
+element.classList.add("new-class");
+
+/* ##################### classList.remove #####################
+  Remove the provided class from the existing array of classes.
+############################################################## */
+element.classList.remove("packprop");
+
+/* ############### classList.toggle ###############
+  Adds the provided class to the array of classes,
+  acts like a switch.
+################################################## */
+element.classList.toggle("--active");
+
+/* ############## classList.replate ##############
+  Replace the provided class with a another one.
+################################################# */
+element.classList.replace("packprop", "another-class");
