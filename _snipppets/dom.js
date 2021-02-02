@@ -104,3 +104,45 @@ element.style.color = "crimson";
   Set css inline styles.
 ########################################################## */
 element.style.cssText = "color:crimson;background-color:black;";
+
+/*------------------- CREATE DOM ELEMENTS -------------------*/
+
+/* ############## document.createElement ##############
+  Creates a new dom element-
+############################################# */
+const newArticle = document.createElement("article");
+const newParagraph = document.createElement("p");
+
+/* ############## element.apend ##############
+  Put the new element within at the end
+############################################# */
+element.append(newArticle);
+
+/* ############## element.prepend ##############
+  Put the new element within at the begining
+############################################# */
+element.prepend(newArticle);
+
+/* ############## element.appendChild ##############
+  Same as append but returns created element.
+############################################# */
+element.appendChild(newArticle);
+
+/* ############## element.replaceChild ##############
+  Replace child element with a new provided one.
+############################################# */
+element.replaceChild(newArticle, newParagraph);
+
+/* ############## element.insertBefore ##############
+  Insert new element before provided element.
+############################################# */
+element.insertBefore(newArticle, newParagraph);
+
+/* ############## element.insertAdjacentElement ##############
+  Insert a new element before or after, withind or ouside.
+  afterbegin
+  afterend
+  beforebegin
+  beforeend
+############################################# */
+element.insertAdjacentElement("beforeend", newArticle);
