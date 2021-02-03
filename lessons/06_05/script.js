@@ -5,6 +5,9 @@
 
 let color = "purple";
 
+// You can't re assign constant variables
+// const color = "purple";
+
 document.querySelector(".left").style.backgroundColor = color;
 document.querySelector(".left .color-value").innerHTML = color;
 
