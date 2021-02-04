@@ -3,25 +3,21 @@
  * @link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
  */
 
-const greenPack = {
-  name: "Frog Pack",
-  color: "green",
-  volume: 8,
-  pocketNum: 3,
-};
+// const main = document.querySelector("main");
+// main.append(addPack(greenPack));
 
-const addPack = (currentPack) => {
-  const newArticle = document.createElement("article");
-  newArticle.innerHTML = `
-    <h1>${currentPack.name}</h1>
-    <ul>
-      <li>Volume: ${currentPack.volume}</li>
-      <li>Color: ${currentPack.color}</li>
-      <li>Number of pockets: ${currentPack.pocketNum}</li>
-    </ul>
-  `;
-  return newArticle;
-};
+// function addition(a, b) {
+//   return a + b;
+// }
 
-const main = document.querySelector("main");
-main.append(addPack(greenPack));
+// const addition = (a, b) => {
+//   return a + b;
+// };
+
+// const addition = (a, b) => (a + b);
+
+// const book = (titleValue, priceValue) => ({ title: titleValue, price: priceValue });
+
+const book = (title) => ({ title });
+
+console.log(book("The big horse"));
