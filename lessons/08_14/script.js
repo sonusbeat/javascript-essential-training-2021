@@ -31,7 +31,7 @@ const nestedObjects = {
     type: "tool",
     weight: 40,
   },
-  item03: {
+  item06: {
     name: "water bottle",
     type: "equipment",
     weight: 1300,
@@ -46,11 +46,13 @@ let stuffList = document.createElement("ul");
  * for loop
  * @link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for
  */
-for (let i = 0; i < stuff.length; i++) {
-  let listItem = document.createElement("li");
-  listItem.innerHTML = stuff[i];
-  stuffList.append(listItem);
-}
+// for (let i = 0; i < stuff.length; i++) {
+//   let listItem = document.createElement("li");
+//   listItem.innerHTML = stuff[i];
+//   stuffList.append(listItem);
+// }
+
+// console.log(stuffList);
 
 /**
  * for...of loop and arrays
@@ -62,11 +64,13 @@ for (let i = 0; i < stuff.length; i++) {
 //   stuffList.append(listItem);
 // }
 
+// console.log(stuffList);
+
 /**
  * foreach array method
  * @link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
  */
-// stuff.forEach((item) => {
+// stuff.forEach(item => {
 //   let listItem = document.createElement("li");
 //   listItem.innerHTML = item;
 //   stuffList.append(listItem);
@@ -76,11 +80,10 @@ for (let i = 0; i < stuff.length; i++) {
  * for...in loop and objects
  * @link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of
  */
-// for (const singleObject in nestedObjects) {
-//   let listItem = document.createElement("li");
-//   listItem.innerHTML = `Name: ${nestedObjects[singleObject].name}`;
-//   stuffList.append(listItem);
-// }
-
+for (const singleObject in nestedObjects) {
+  let listItem = document.createElement("li");
+  listItem.innerHTML = `${nestedObjects[singleObject].name}`;
+  stuffList.append(listItem);
+}
 
 article.append(stuffList);
